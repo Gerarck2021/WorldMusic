@@ -33,23 +33,29 @@ body {
     height: 50vh;
 }
 
-.videos-usuario, .elementos-navegacion, .video-imagen{
+.videos-usuario .apartado-canciones, .elementos-navegacion, .video-imagen{
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
+
+/* .videos-usuario .apartado-canciones article {
+    margin-left: -1%;
+} */
 
 .apartado-videos {
     padding: 30px;
 }
 
 .options {
-    width: 15vw;
+    width: 25vw;
     height: 10vh;
     text-align: center;
     font-family: 'Patrick Hand', cursive;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 22px;
+    display: block;
+    margin: auto;
 }
 
 .value-option:hover {
@@ -152,7 +158,7 @@ article div p, .title, h2, footer, .descripcion-cancion, .downloads{
 
 article div p {
     font-weight: bold;
-    width: 32vw;
+    width: 20vw
 }
 
 nav {
@@ -191,11 +197,17 @@ section .search-bar {
     font-family: 'Patrick Hand', cursive;
 }
 
+article div p {
+    width: 32vw;
+}
+
+
 @media(min-width: 800px) {
 
     article div p {
         font-weight: bold;
         font-size: 25px;
+        width: 22vw;
     }
 
     
@@ -212,6 +224,10 @@ section .search-bar {
         width: 80vw;
         display: block;
         margin: auto;
+    }
+
+    .videos-usuario {
+        flex-direction: column;
     }
 
     
@@ -239,6 +255,8 @@ section .search-bar {
     } */
 
     
+
+    
 }
 
 @media(max-width: 385px) {
@@ -246,6 +264,4 @@ section .search-bar {
         font-weight: bold;
         font-size: 15px;
     }
-
-    
 }
