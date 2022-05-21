@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "canciones": [
+            {
+                "id": 1,
+                "nombre": "Tu Falta de Querer"
+            },
+            {
+                "id": 2,
+                "nombre": "Amárrame"
+            },
+            {
+                "id": 3,
+                "nombre": "Pa Donde Se Fue"
+            },
+            {
+                "id": 4,
+                "nombre": "Mi Buen Amor"
+            }
+        ],
+        "artista": "Mon Laferte",
+        "apodo": "mon-laferte",
+        "imagen": "tu-falta-de-querer.jpg"
+    },
+
+    {
+        "id": 2,
+        "canciones": [
+            {
+                "id": 5,
+                "nombre": "Tu Falta de Querer"
+            },
+            {
+                "id": 6,
+                "nombre": "Amárrame"
+            },
+            {
+                "id": 7,
+                "nombre": "Pa Donde Se Fue"
+            },
+            {
+                "id": 8,
+                "nombre": "Mi Buen Amor"
+            }
+        ],
+        "artista": "Natalia Lafourcade",
+        "apodo": "natalia-lafourcade",
+        "imagen": "hasta-la-raiz.jpeg"
+    },
+
+    {
+        "id": 3,
+        "canciones": [
+            {
+                "id": 9,
+                "nombre": "Tu Falta de Querer"
+            },
+            {
+                "id": 10,
+                "nombre": "Amárrame"
+            },
+            {
+                "id": 11,
+                "nombre": "Pa Donde Se Fue"
+            },
+            {
+                "id": 12,
+                "nombre": "Mi Buen Amor"
+            }
+        ],
+        "artista": "Carla Morrinson",
+        "apodo": "carla-morrinson",
+        "imagen": "te-regalo.jpg"
+    }
+]
