@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const port = process.env.PORT || 3000;
-const { indexRoutes, artistsRoutes} = require('./router/main.routes');
+const { indexRoutes, artistsRoutes, usersRoutes} = require('./router/main.routes');
 
 //exponiendo carpeta publica
 app.use(express.static(path.resolve(__dirname, '../public')));
@@ -10,6 +10,10 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 app.use('/', indexRoutes); 
 
 app.use('/artistas', artistsRoutes);
+
+app.use('/users', usersRoutes);
+
+
 
 app.get('/mon-laferte', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/video-mon-laferte.html'));

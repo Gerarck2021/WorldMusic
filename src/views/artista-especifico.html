@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Artistas</title>
+    <title>Nombre de Artista</title>
 </head>
-
 <body>
-
     <h1 class="text-center title">Hola!!! Bienvenid@ a <span class="world-music">WorldMusic</span></h1>
 
     <header>
@@ -20,8 +17,8 @@
             <ul class="elementos-navegacion">
                 <li><a href="/" class="contenido-elemento text-center">Inicio</a></li>
                 <li><a href="/artistas" class="contenido-elemento text-center">Artistas</a></li>
-                <li><a href="/iniciar-sesion" class="contenido-elemento text-center">Iniciar Sesion</a></li>
-                <li><a href="/registro-usuarios" class="contenido-elemento text-center">Registro</a></li>
+                <li><a href="" class="contenido-elemento text-center">Iniciar Sesion</a></li>
+                <li><a href="" class="contenido-elemento text-center">Registro</a></li>
             </ul>
         </nav>
     </header>
@@ -30,33 +27,32 @@
         <input type="text" name="search-bar" class="search-bar" placeholder="Buscar en WorldMusic...">
     </section>
 
-    <h1 class="text-center title">Artistas</h1>
-
+    <h2 class="text-center">Canciones de Mon Laferte</h2>
     <section class="videos-usuario">
-        <!--Videos que mas le gustan al usuario-->
-        <!-- <video src="./video/video1.mp4" controls></video> -->
+        <!--Videos que se recomiendan en la plataforma-->
+        <!-- <video src="./video/video1.mp4" controls class=""></video> -->
         <div class="apartado-canciones">
             <article>
-                <img src="./img/tu-falta-de-querer.jpg" alt="" class="music-image">
+                <img src="../img/tu-falta-de-querer.jpg" alt="" class="music-image">
                 <div class="details text-center">
-                    <p>Mon Laferte</p>
-                    <a href="/artistas/mon-laferte" class="acerca-cancion">Ver Más</a>
+                    <p>Tu Falta de Querer</p>
+                    <a href="/artistas/mon-laferte/tu-falta-de-querer" class="acerca-cancion">Ver Más</a>
                 </div>
             </article>
     
             <article>
-                <img src="./img/hasta-la-raiz.jpeg" alt="" class="music-image">
+                <img src="../img/amarrame.jpg" alt="" class="music-image">
                 <div class="details text-center">
-                    <p>Natalia Lafourcade</p>
-                    <a href="/natalia-lafourcade" class="acerca-cancion">Ver Más</a>
+                    <p>Amárrame</p>
+                    <a href="" class="acerca-cancion">Ver Más</a>
                 </div>
             </article>
     
             <article>
-                <img src="./img/te-regalo.jpg" alt="" class="music-image">
+                <img src="../img/antes-de-ti.jpg" alt="" class="music-image">
                 <div class="details text-center">
-                    <p>Carla Morrinson</p>
-                    <a href="/carla-morrinson" class="acerca-cancion">Ver Más</a>
+                    <p>Antes de Tí</p>
+                    <a href="" class="acerca-cancion">Ver Más</a>
                 </div>
             </article>
         </div>
@@ -64,22 +60,18 @@
         <div class="apartado-opciones">
             <h2 class="text-center">Ordenar Por</h2>
             <select name="options" class="options">
-                <option value="" class="value-option">Mas Escuchad@</option>
-                <option value="" class="value-option">Mas Visitad@</option>
-                <option value="" class="value-option">Más Vist@</option>
-                <option value="" class="value-option">Menos Vist@</option>
-                <option value="" class="value-option">Más Antigu@</option>
+                <option value="" class="value-option">Nombre de Canción</option>
+                <option value="" class="value-option">Más Visto</option>
+                <option value="" class="value-option">Menos Visto</option>
+                <option value="" class="value-option">Fecha de Publicación</option>
+                <option value="" class="value-option">Más Antiguo</option>
                 <option value="" class="value-option">Más Actual</option>
             </select>
         </div>
     </section>
-    <!-- <a href="/artistas/mon-laferte">Mon Laferte</a> <br>
-    <a href="/artistas/natalia-lafourcade">Natalia Lafourcade</a> <br>
-    <a href="/artistas/carla-morrinson">Carla Morrinson</a> -->
 
     <footer class="text-center footer-page">
         &copy; Derechos reservados. WorldMusic - German Arciniegas 2022-2022 :)
     </footer>
 </body>
-
 </html>

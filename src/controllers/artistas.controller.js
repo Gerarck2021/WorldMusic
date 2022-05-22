@@ -8,7 +8,7 @@ const artistsController = {
     },
 
     getMonLaferte: (req, res) => {
-        return res.sendFile(path.resolve(__dirname, '../views/mon-laferte.html'));
+        return res.sendFile(path.resolve(__dirname, '../views/artista-especifico.html'));
     },
 
     getNataliaLafourcade: (req, res) => {
@@ -29,6 +29,10 @@ const artistsController = {
         let canciones = dataModel.getCanciones();
         console.log(canciones);
         return res.render(path.resolve(__dirname, '../views/vista-ejemplo.ejs'), {canciones: canciones})
+    },
+
+    getSong: (req, res) => {
+        return res.sendFile(path.resolve(__dirname, '../views/video-mon-laferte.html'));
     }
 }
 
