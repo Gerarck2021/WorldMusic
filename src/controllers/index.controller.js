@@ -1,8 +1,10 @@
 const path = require('path');
+const dataModel = require('../models/index.model');
 
 const indexController = {
     getIndex: (req, res) => {
-        return res.sendFile(path.resolve(__dirname, '../views/index.html'));
+        let datos = dataModel.getData();
+        return res.render(path.resolve(__dirname, '../views/index.ejs'), {datos});
     }
 }
 

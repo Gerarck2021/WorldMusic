@@ -36,29 +36,15 @@
         <!--Videos que mas le gustan al usuario-->
         <!-- <video src="./video/video1.mp4" controls></video> -->
         <div class="apartado-canciones">
-            <article>
-                <img src="./img/tu-falta-de-querer.jpg" alt="" class="music-image">
-                <div class="details text-center">
-                    <p>Mon Laferte</p>
-                    <a href="/artistas/mon-laferte" class="acerca-cancion">Ver Más</a>
-                </div>
-            </article>
-    
-            <article>
-                <img src="./img/hasta-la-raiz.jpeg" alt="" class="music-image">
-                <div class="details text-center">
-                    <p>Natalia Lafourcade</p>
-                    <a href="/natalia-lafourcade" class="acerca-cancion">Ver Más</a>
-                </div>
-            </article>
-    
-            <article>
-                <img src="./img/te-regalo.jpg" alt="" class="music-image">
-                <div class="details text-center">
-                    <p>Carla Morrinson</p>
-                    <a href="/carla-morrinson" class="acerca-cancion">Ver Más</a>
-                </div>
-            </article>
+            <% for(let i = 0; i < datos.length; i++) { %>
+                <article>
+                    <img src="./img/<%= datos[i].imagen%>" alt="" class="music-image">
+                    <div class="details text-center">
+                        <p><%= datos[i].artista %></p>
+                        <a href="/artistas/<%= datos[i].apodo %>" class="acerca-cancion">Ver Más</a>
+                    </div>
+                </article>
+            <% } %>
         </div>
 
         <div class="apartado-opciones">
