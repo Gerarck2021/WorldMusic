@@ -1,3 +1,60 @@
 [
-    
+    {
+        "id": 2,
+        "nombres": "Andres",
+        "apellidos": "Arciniegas",
+        "telefono": 3008,
+        "email": "andres23@misena.edu.co",
+        "clave": "1234",
+        "confirmacionclave": "1234",
+        "rol": "Espectador",
+        "interes": null
+    },
+    {
+        "id": 3,
+        "nombres": "Ana",
+        "apellidos": "Fuentes",
+        "telefono": 3008,
+        "email": "ana23@misena.edu.co",
+        "clave": "1234",
+        "confirmacionclave": "1234",
+        "rol": "Administrador",
+        "interes": null
+    },
+    {
+        "id": 4,
+        "nombres": "German",
+        "apellidos": "Arciniegas",
+        "telefono": "27839",
+        "email": "gaarciniegas23@misena.edu.co",
+        "clave": "abcd",
+        "confirmacionclave": "abcd",
+        "rol": "administrador"
+    },
+    {
+        "id": 5,
+        "nombres": "German",
+        "apellidos": "Arciniegas",
+        "telefono": "27839",
+        "email": "gaarciniegas23@misena.edu.co",
+        "clave": "abcd",
+        "confirmacionclave": "abcd",
+        "rol": "administrador",
+        "interes": [
+            "pop",
+            "pop-rock",
+            "pop-romantico"
+        ]
+    },
+    {
+        "id": 6,
+        "nombres": "Andres German",
+        "apellidos": "Arciniegas",
+        "telefono": "3008",
+        "email": "andres23@misena.edu.co",
+        "clave": "contraseñacambiada",
+        "confirmacionclave": "contraseñacambiada",
+        "rol": "administrador",
+        "interes": "rock"
+    }
 ]
