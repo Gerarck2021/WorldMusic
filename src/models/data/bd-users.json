@@ -56,5 +56,49 @@
         "confirmacionclave": "contraseñacambiada",
         "rol": "administrador",
         "interes": "rock"
+    },
+    {
+        "id": 7,
+        "nombres": "Bernardo",
+        "apellidos": "Flores",
+        "telefono": "3008731817",
+        "email": "bernardo@ejemplo.com",
+        "clave": "claveprueba",
+        "confirmacionclave": "claveprueba",
+        "rol": "administrador",
+        "interes": [
+            "pop-rock",
+            "pop-romantico"
+        ]
+    },
+    {
+        "id": 8,
+        "nombres": "Natalia",
+        "apellidos": "Laferte",
+        "telefono": "2840939757",
+        "email": "gaarciniegas23@misena.edu.co",
+        "clave": "dias",
+        "confirmacionclave": "dias",
+        "rol": "espectador",
+        "interes": [
+            "pop",
+            "pop-rock",
+            "pop-romantico"
+        ]
+    },
+    {
+        "id": 9,
+        "nombres": "Natalia",
+        "apellidos": "Laferte",
+        "telefono": "2840939757",
+        "email": "gaarciniegas23@misena.edu.co",
+        "clave": "dias",
+        "confirmacionclave": "dias",
+        "rol": "espectador",
+        "interes": [
+            "pop",
+            "pop-rock",
+            "pop-romantico"
+        ]
     }
 ]

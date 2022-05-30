@@ -1,5 +1,4 @@
 const path = require('path');
-const { markAsUntransferable } = require('worker_threads');
 const userModel = require('../models/users.model');
 
 const newId = () => {
@@ -36,7 +35,7 @@ const usersController = {
         }
         userModel.createUser(newUser);
         console.log(newUser);
-        res.redirect('/');
+        res.redirect('/users/iniciar-sesion');
     },
 
     getUsers: (req, res) => {

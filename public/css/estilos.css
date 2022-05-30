@@ -257,7 +257,7 @@ label {
 
     article div p {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .video-musica {
@@ -285,7 +285,7 @@ label {
 @media(min-width: 385px) {
     article div p {
         font-weight: bold;
-        font-size: 20px;
+        font-size: 18.5px;
     }
 
     .video-musica {
