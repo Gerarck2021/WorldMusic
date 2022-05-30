@@ -19,13 +19,17 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
-
 //manejo de uso de las rutas
 app.use('/', indexRoutes); 
 
 app.use('/artistas', artistsRoutes);
 
 app.use('/users', usersRoutes);
+
+//error 404
+app.use((req, res, next) => {
+    res.status(404).render(path.resolve(__dirname, './views/not-found-page.ejs'));
+});
 
 //poner en escucha al servidor
 app.listen(port, console.log(`Servidor corriendo en el puerto ${port}`));

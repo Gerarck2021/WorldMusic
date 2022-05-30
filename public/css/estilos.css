@@ -77,7 +77,7 @@ nav ul li {
     list-style-type: none;
 }
 
-nav ul li a, div a, section a {
+nav ul li a, div a, section a, .volver-inicio {
     text-decoration: none;
     color: black;
 }
@@ -239,6 +239,11 @@ label {
     font-family: 'Patrick Hand', cursive;
     font-size: 20px;
     font-weight: bold;
+}
+
+.volver-inicio, .img-not-found {
+    display: block;
+    margin: auto;
 }
 
 
