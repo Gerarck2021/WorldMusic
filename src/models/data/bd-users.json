@@ -100,5 +100,22 @@
             "pop-rock",
             "pop-romantico"
         ]
+    },
+    {
+        "id": 10,
+        "nombres": "Andres German",
+        "apellidos": "Arciniegas Soracá",
+        "telefono": "3008731817",
+        "email": "andres23@misena.edu.co",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "espectador",
+        "interes": [
+            "pop",
+            "pop-rock",
+            "pop-romantico",
+            "romantico",
+            "rock"
+        ]
     }
 ]

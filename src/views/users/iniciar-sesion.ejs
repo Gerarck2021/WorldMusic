@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('../partials/head');%>
+
+<body>
+    <h1 class="text-center title">Hola!!! Bienvenid@ a <span class="world-music">WorldMusic</span></h1>
+
+    <%-include('../partials/header'); %>
+
+    <h1 class="title text-center">Iniciar Sesion</h1>
+    <form action="" method="post" class="form-login">
+        <label for="correo">Correo</label>
+        <input type="email" name="email" id="email" class="input-data" placeholder="usuario@ejemplo.com">
+
+        <label for="clave">Clave</label>
+        <input type="password" name="clave" id="clave" class="input-data" placeholder="*****************">
+
+        <div class="buttons">
+            <input type="submit" value="Enviar" class="button">
+            <input type="reset" value="Limpiar" class="button">
+        </div>
+    </form>
+
+    <%-include('../partials/footer'); %>
+</body>
+
+</html>

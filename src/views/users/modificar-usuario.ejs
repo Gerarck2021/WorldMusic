@@ -1,43 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/estilos.css">
-    <title>Registro de Usuarios a WorldMusic</title>
-</head>
+<%-include('../partials/head');%>
 
 <body>
     <h1 class="text-center title">Hola!!! Bienvenid@ a <span class="world-music">WorldMusic</span></h1>
 
-    <header>
-        <!--Banner-->
-        <!-- <img src="./img/foto.jpg" alt=""> -->
-        <nav class="navegacion">
-            <ul class="elementos-navegacion">
-                <li><a href="/" class="contenido-elemento text-center">Inicio</a></li>
-                <li><a href="/artistas" class="contenido-elemento text-center">Artistas</a></li>
-                <li><a href="/users/iniciar-sesion" class="contenido-elemento text-center">Iniciar Sesion</a></li>
-                <li><a href="" class="contenido-elemento text-center">Registro</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%-include('../partials/header'); %>
 
-    <h1 class="title text-center">Modificacion de Usuarios - Usuario: <%= usuario.nombres %></h1>
+    <h1 class="title text-center">Modificación de Usuarios</h1>
     <form action="/users/registro" method="post" class="form-register">
         <label for="correo">Nombres</label>
-        <input type="text" name="nombres" id="nombres" class="input-data" placeholder="Nombres Completos" value="<%=usuario.nombres %>">
+        <input type="text" name="nombres" id="nombres" class="input-data" placeholder="Nombres Completos">
 
         <label for="apellidos">Apellidos</label>
-        <input type="text" name="apellidos" id="apellidos" class="input-data" placeholder="Apellidos Completos" value="<%=usuario.apellidos %>">
+        <input type="text" name="apellidos" id="apellidos" class="input-data" placeholder="Apellidos Completos">
 
         <label for="correo">Telefono</label>
-        <input type="tel" name="telefono" id="telefono" class="input-data" placeholder="+573003000000" value="<%=usuario.telefono %>">
+        <input type="tel" name="telefono" id="telefono" class="input-data" placeholder="+573003000000">
 
         <label for="correo">Correo</label>
-        <input type="email" name="email" id="email" class="input-data" placeholder="usuario@ejemplo.com" value="<%=usuario.email %>">
+        <input type="email" name="email" id="email" class="input-data" placeholder="usuario@ejemplo.com">
 
         <label for="correo">Clave</label>
         <input type="password" name="clave" id="clave" class="input-data" placeholder="*****************">
@@ -67,9 +50,7 @@
         </div>
     </form>
 
-    <footer class="text-center footer-page">
-        &copy; Derechos reservados. WorldMusic - German Arciniegas 2022-2022 :)
-    </footer>
+    <%-include('../partials/footer'); %>
 </body>
 
 </html>

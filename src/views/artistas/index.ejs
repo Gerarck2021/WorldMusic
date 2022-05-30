@@ -1,29 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/estilos.css">
-    <title>Inicio</title>
-</head>
+<%-include('../partials/head');%>
 
 <body>
     <h1 class="text-center title">Hola!!! Bienvenid@ a <span class="world-music">WorldMusic</span></h1>
 
-    <header>
-        <!--Banner-->
-        <!-- <img src="./img/foto.jpg" alt=""> -->
-        <nav class="navegacion">
-            <ul class="elementos-navegacion">
-                <li><a href="/" class="contenido-elemento text-center">Inicio</a></li>
-                <li><a href="/artistas" class="contenido-elemento text-center">Artistas</a></li>
-                <li><a href="/users/iniciar-sesion" class="contenido-elemento text-center">Iniciar Sesion</a></li>
-                <li><a href="/users/registro" class="contenido-elemento text-center">Registro</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%-include('../partials/header'); %>
 
     <section>
         <input type="text" name="search-bar" class="search-bar" placeholder="Buscar en WorldMusic...">
@@ -90,9 +73,7 @@
         </div>
     </section>
 
-    <footer class="text-center footer-page">
-        &copy; Derechos reservados. WorldMusic - German Arciniegas 2022-2022 :)
-    </footer>
+    <%-include('../partials/footer'); %>
 </body>
 
 </html>

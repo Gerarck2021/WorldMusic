@@ -6,18 +6,18 @@ const data = require('../models/data/bd-music.json');
 const artistsController = {
     getArtistas: (req, res) => {
         let datos = dataModel.getData();
-        return res.render(path.resolve(__dirname, '../views/artistas.ejs'), {datos});
+        return res.render(path.resolve(__dirname, '../views/artistas/artistas.ejs'), {datos});
     },
 
     getArtistaEspecifico: (req, res) => {
         let datos = dataModel.getData();
-        return res.render(path.resolve(__dirname, '../views/artista-especifico.ejs'), {datos});
+        return res.render(path.resolve(__dirname, '../views/artistas/artista-especifico.ejs'), {datos});
     },
 
     getDataMusica: (req, res) => {
         let datos = dataModel.getData();
         console.log(datos);
-        return res.render(path.resolve(__dirname, '../views/vista-dinamica.ejs'), {datos: dataModel.getData()});
+        return res.render(path.resolve(__dirname, '../views/artistas/vista-dinamica.ejs'), {datos: dataModel.getData()});
     },
 
     getArtista: (req, res) => {
@@ -42,13 +42,13 @@ const artistsController = {
 
         // let canciones = dataModel.getCanciones();
         // console.log(canciones);
-        return res.render(path.resolve(__dirname, '../views/vista-ejemplo.ejs'), {artistas: artistas})
+        return res.render(path.resolve(__dirname, '../views/artistas/vista-ejemplo.ejs'), {artistas: artistas})
     },
 
     getSong: (req, res) => {
         let datos = dataModel.getData();
         let id = req.params.id - 1;
-        return res.render(path.resolve(__dirname, '../views/video-mon-laferte.ejs'), {datos, id});
+        return res.render(path.resolve(__dirname, '../views/artistas/video-mon-laferte.ejs'), {datos, id});
     }
 }
 

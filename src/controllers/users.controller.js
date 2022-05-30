@@ -13,11 +13,11 @@ const newId = () => {
 
 const usersController = {
     getLogin: (req, res) => {
-        return res.render(path.resolve(__dirname, '../views/iniciar-sesion.ejs'));
+        return res.render(path.resolve(__dirname, '../views/users/iniciar-sesion.ejs'));
     },
 
     getRegister: (req, res) => {
-        return res.render(path.resolve(__dirname, '../views/registro.ejs'));
+        return res.render(path.resolve(__dirname, '../views/users/registro.ejs'));
     },
 
     afterRegister: (req, res) => {
@@ -40,7 +40,7 @@ const usersController = {
 
     getUsers: (req, res) => {
         let usuarios = userModel.getUsers();
-        return res.render(path.resolve(__dirname, '../views/listaUsuarios.ejs'), {usuarios});
+        return res.render(path.resolve(__dirname, '../views/users/listaUsuarios.ejs'), {usuarios});
     },
 
     afterLogin: (req, res) => {
@@ -48,7 +48,7 @@ const usersController = {
         if(condicion) {
             return res.redirect('/');
         } else {
-            return res.render(path.resolve(__dirname, '../views/iniciar-sesion.ejs'));
+            return res.render(path.resolve(__dirname, '../views/users/iniciar-sesion.ejs'));
         }
     },
 
@@ -60,7 +60,7 @@ const usersController = {
                 res.send("Usuario invalido");
                 break;
             } else {
-                res.render(path.resolve(__dirname, '../views/user-edit.ejs'), { usuario: userModel.getUsers()[idUserUrl - 1], usuarios });
+                res.render(path.resolve(__dirname, '../views/users/user-edit.ejs'), { usuario: userModel.getUsers()[idUserUrl - 1], usuarios });
                 break;
             }
         }
@@ -93,7 +93,7 @@ const usersController = {
             }
         }
 
-        res.render(path.resolve(__dirname, '../views/delete-user.ejs'), {usuario: idUserUrl});
+        res.render(path.resolve(__dirname, '../views/users/delete-user.ejs'), {usuario: idUserUrl});
     },
 
     UserDeleted: (req, res) => {
