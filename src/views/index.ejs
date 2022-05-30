@@ -31,17 +31,19 @@
 
     <h2 class="text-center">Videos mas vistos por el usuario</h2>
     <section class="videos-usuario">
-        <% for(let i=0; i < datos.length; i++) {%>
-        <!--Videos que mas le gustan al usuario-->
-        <!-- <video src="./video/video1.mp4" controls></video> -->
-        <article>
-            <img src="../img/<%= datos[i].imagen%>" alt="" class="music-image">
-            <div class="details text-center">
-                <p><%=datos[i].cancion%></p>
-                <a href="/mon-laferte" class="acerca-cancion">Ver Más</a>
-            </div>
-        </article>
-        <% }%>
+        <div class="apartado-canciones">
+            <% for(let i=0; i < datos.length; i++) {%>
+                <!--Videos que mas le gustan al usuario-->
+                <!-- <video src="./video/video1.mp4" controls></video> -->
+                <article>
+                    <img src="../img/<%= datos[i].imagen%>" alt="" class="music-image">
+                    <div class="details text-center">
+                        <p><%=datos[i].cancion%></p>
+                        <a href="/mon-laferte" class="acerca-cancion">Ver Más</a>
+                    </div>
+                </article>
+            <% }%>
+        </div>
 
         <div class="apartado-opciones">
             <h2 class="text-center">Ordenar Por</h2>
@@ -61,17 +63,19 @@
     <section class="videos-usuario">
         <!--Videos que se recomiendan en la plataforma-->
         <!-- <video src="./video/video1.mp4" controls class=""></video> -->
-        <% for(let i=0; i < datos.length; i++) {%>
-            <!--Videos que mas le gustan al usuario-->
-            <!-- <video src="./video/video1.mp4" controls></video> -->
-            <article>
-                <img src="../img/<%= datos[i].imagen%>" alt="" class="music-image">
-                <div class="details text-center">
-                    <p><%=datos[i].cancion%></p>
-                    <a href="/mon-laferte" class="acerca-cancion">Ver Más</a>
-                </div>
-            </article>
-        <% }%>
+       <div class="apartado-canciones">
+            <% for(let i=0; i < datos.length; i++) {%>
+                <!--Videos que mas le gustan al usuario-->
+                <!-- <video src="./video/video1.mp4" controls></video> -->
+                <article>
+                    <img src="../img/<%= datos[i].imagen%>" alt="" class="music-image">
+                    <div class="details text-center">
+                        <p><%=datos[i].cancion%></p>
+                        <a href="/mon-laferte" class="acerca-cancion">Ver Más</a>
+                    </div>
+                </article>
+            <% }%>
+       </div>
 
         <div class="apartado-opciones">
             <h2 class="text-center">Ordenar Por</h2>

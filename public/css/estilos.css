@@ -275,7 +275,7 @@ label {
         height: 7vh;
     }
 
-    .options-roles {
+    .options-roles, .options {
         width: 50vw;
     }
 
@@ -319,7 +319,7 @@ label {
         height: 7vh;
     }
 
-    .options-roles {
+    .options-roles, .options {
         width: 50vw;
     }
 }
