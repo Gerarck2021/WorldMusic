@@ -9,7 +9,7 @@
     <%-include('../partials/header'); %>
 
     <h1 class="title text-center">Modificacion de Usuarios - Usuario: <%= usuario.nombres %></h1>
-    <form action="/users/registro" method="post" class="form-register">
+    <form action="/users/editar-usuario/<%=usuario.id %>?_method=PUT" method="post" class="form-register">
         <label for="correo">Nombres</label>
         <input type="text" name="nombres" id="nombres" class="input-data" placeholder="Nombres Completos" value="<%=usuario.nombres %>">
 

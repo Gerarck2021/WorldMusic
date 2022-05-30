@@ -77,9 +77,11 @@ const usersController = {
             clave: req.body.clave,
             confirmacionclave: req.body.confirmacionclave,
             rol: req.body.roles,
-            interes: req.body.interes
+            interes: req.body.interes == undefined ? null : req.body.interes
         }
-        userModel.UserUpdate(req.params.id_usuario, datosUsuario);
+        userModel.UserUpdate(idUserUrl, datosUsuario);
+        console.log(datosUsuario);
+        console.log(idUserUrl);
         res.redirect('/');
     },
 

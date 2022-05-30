@@ -15,7 +15,7 @@ router.post('/iniciar-sesion', usersController.afterLogin);
 
 router.get('/editar-usuario/:id_usuario', usersController.userToUpdate);
 
-router.put('/', usersController.userUpdated);
+router.put('/editar-usuario/:id_usuario', usersController.userUpdated);
 
 router.get('/eliminar-usuario/:id_usuario', usersController.UserToDelete);
 

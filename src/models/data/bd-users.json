@@ -1,17 +1,17 @@
 [
     {
-        "id": 2,
-        "nombres": "Andres",
-        "apellidos": "Arciniegas",
-        "telefono": 3008,
-        "email": "andres23@misena.edu.co",
-        "clave": "1234",
-        "confirmacionclave": "1234",
-        "rol": "Espectador",
+        "id": 1,
+        "nombres": "Ana Maria Maria Fuentes",
+        "apellidos": "Nuñez",
+        "telefono": "3008",
+        "email": "ana23@misena.edu.co",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador",
         "interes": null
     },
     {
-        "id": 3,
+        "id": 2,
         "nombres": "Ana",
         "apellidos": "Fuentes",
         "telefono": 3008,
@@ -22,7 +22,7 @@
         "interes": null
     },
     {
-        "id": 4,
+        "id": 3,
         "nombres": "German",
         "apellidos": "Arciniegas",
         "telefono": "27839",
@@ -32,7 +32,7 @@
         "rol": "administrador"
     },
     {
-        "id": 5,
+        "id": 4,
         "nombres": "German",
         "apellidos": "Arciniegas",
         "telefono": "27839",
@@ -47,7 +47,7 @@
         ]
     },
     {
-        "id": 6,
+        "id": 5,
         "nombres": "Andres German",
         "apellidos": "Arciniegas",
         "telefono": "3008",
@@ -58,7 +58,7 @@
         "interes": "rock"
     },
     {
-        "id": 7,
+        "id": 6,
         "nombres": "Bernardo",
         "apellidos": "Flores",
         "telefono": "3008731817",
@@ -67,6 +67,21 @@
         "confirmacionclave": "claveprueba",
         "rol": "administrador",
         "interes": [
+            "pop-rock",
+            "pop-romantico"
+        ]
+    },
+    {
+        "id": 7,
+        "nombres": "Natalia",
+        "apellidos": "Laferte",
+        "telefono": "2840939757",
+        "email": "gaarciniegas23@misena.edu.co",
+        "clave": "dias",
+        "confirmacionclave": "dias",
+        "rol": "espectador",
+        "interes": [
+            "pop",
             "pop-rock",
             "pop-romantico"
         ]
@@ -88,21 +103,6 @@
     },
     {
         "id": 9,
-        "nombres": "Natalia",
-        "apellidos": "Laferte",
-        "telefono": "2840939757",
-        "email": "gaarciniegas23@misena.edu.co",
-        "clave": "dias",
-        "confirmacionclave": "dias",
-        "rol": "espectador",
-        "interes": [
-            "pop",
-            "pop-rock",
-            "pop-romantico"
-        ]
-    },
-    {
-        "id": 10,
         "nombres": "Andres German",
         "apellidos": "Arciniegas Soracá",
         "telefono": "3008731817",
