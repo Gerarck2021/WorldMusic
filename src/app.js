@@ -8,6 +8,10 @@ const { indexRoutes, artistsRoutes, usersRoutes} = require('./router/main.routes
 //para metodos de modificar y eliminar datos
 app.use(methodOverride('_method'));
 
+//indicar que queremos ese template engine
+app.set('views',path.resolve(__dirname,'./views'))
+app.set('view engine', 'ejs');
+
 //exponiendo carpeta publica
 app.use(express.static(path.resolve(__dirname, '../public')));
 

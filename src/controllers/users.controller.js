@@ -13,11 +13,11 @@ const newId = () => {
 
 const usersController = {
     getLogin: (req, res) => {
-        return res.sendFile(path.resolve(__dirname, '../views/iniciar-sesion.html'));
+        return res.render(path.resolve(__dirname, '../views/iniciar-sesion.ejs'));
     },
 
     getRegister: (req, res) => {
-        return res.sendFile(path.resolve(__dirname, '../views/registro.html'));
+        return res.render(path.resolve(__dirname, '../views/registro.ejs'));
     },
 
     afterRegister: (req, res) => {
@@ -48,7 +48,7 @@ const usersController = {
         if(condicion) {
             return res.redirect('/');
         } else {
-            return res.sendFile(path.resolve(__dirname, '../views/iniciar-sesion.html'));
+            return res.render(path.resolve(__dirname, '../views/iniciar-sesion.ejs'));
         }
     },
 
