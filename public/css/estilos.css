@@ -141,7 +141,6 @@ nav ul li a, div a, section a, .volver-inicio {
 
 .img-music-recomended {
     width: 20vw;
-    border-radius: 50%;
 }
 
 /* .videos-usuario article {
@@ -246,6 +245,35 @@ label {
     margin: auto;
 }
 
+.cajitas-check {
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.cajitas-check ul li {
+    list-style: none;
+}
+
+.input-data {
+    width: 50%;
+}
+
+.cajitas-check ul {
+    padding: 0%;
+}
+
+.temas-relacionados {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.temas-relacionados .img-music-recomended {
+    display: block;
+    margin: auto;
+}
 
 @media(min-width: 800px) {
 
