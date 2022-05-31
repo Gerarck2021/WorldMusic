@@ -217,15 +217,10 @@ article div p {
     background-color: white;
 }
 
-.input-data {
-    width: 60vw;
-    height: 5vh;
-}
-
 label {
     font-weight: bold;
-    font-size: 30px;
-    width: 60vw;
+    font-size: 27px;
+    width: 45vw;
 }
 
 .buttons {
@@ -257,7 +252,8 @@ label {
 }
 
 .input-data {
-    width: 50%;
+    width: 40%;
+    height: 5vh;
 }
 
 .cajitas-check ul {
@@ -275,12 +271,21 @@ label {
     margin: auto;
 }
 
+.cajitas-check ul {
+    padding: 10px;
+}
+
 @media(min-width: 800px) {
 
     article div p {
         font-weight: bold;
         font-size: 25px;
         width: 22vw;
+    }
+
+    .input-data {
+        width: 45%;
+        height: 5vh;
     }
 
     
@@ -309,6 +314,15 @@ label {
     }
 
     .options-roles, .options {
+        width: 50vw;
+    }
+
+    .input-data {
+        width: 50%;
+        height: 5vh;
+    }
+
+    label {
         width: 50vw;
     }
 
