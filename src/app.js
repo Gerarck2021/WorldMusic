@@ -4,6 +4,8 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 const methodOverride = require('method-override');
 const { indexRoutes, artistsRoutes, usersRoutes} = require('./router/main.routes');
+//se requiere el middleware a nivel aplicacion
+const logMiddlewareApplication = require('./middlewares/logMiddlewareApplication');
 
 //para metodos de modificar y eliminar datos
 app.use(methodOverride('_method'));
@@ -18,6 +20,9 @@ app.use(express.static(path.resolve(__dirname, '../public')));
 //para el envio o transferencia de datos
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
+
+//decimos que queremos usar el middleware de aplicacion
+app.use(logMiddlewareApplication);
 
 //manejo de uso de las rutas
 app.use('/', indexRoutes); 
