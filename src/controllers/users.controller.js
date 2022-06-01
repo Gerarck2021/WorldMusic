@@ -23,7 +23,8 @@ const usersController = {
 
     afterRegister: (req, res, next) => {
 
-        const file = req.file.name;
+        const file = req.file;
+        console.log(file);
         console.log(req.file.filename);
         if(!file) {
             const error = new Error('Tienes que insertar una imagen');

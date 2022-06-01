@@ -13,7 +13,7 @@ const storage = multer.diskStorage({
         cb(null, path.resolve(__dirname, '../../public/img/img-users'));
     },
     filename: (req, file, cb) => {
-        cb(null, Date.now() + '-imgUser2022-' + file.filename + '-worldMusic' + path.extname(file.originalname));
+        cb(null, Date.now() + '-imgUser2022-worldMusic' + file.originalname + 'user' + path.extname(file.originalname));
     }
 });
 

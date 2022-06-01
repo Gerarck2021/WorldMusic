@@ -149,5 +149,82 @@
         "clave": "",
         "confirmacionclave": "",
         "rol": "administrador"
+    },
+    {
+        "id": 13,
+        "nombres": "",
+        "apellidos": "",
+        "telefono": "",
+        "email": "",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador",
+        "imagenusuario": "1654097468327-imgUser2022-undefined-worldMusic.jpeg"
+    },
+    {
+        "id": 14,
+        "nombres": "",
+        "apellidos": "",
+        "telefono": "",
+        "email": "",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador",
+        "imagenusuario": "1654097641698-imgUser2022-foto.jpg-worldMusic.jpg"
+    },
+    {
+        "id": 15,
+        "nombres": "",
+        "apellidos": "",
+        "telefono": "",
+        "email": "",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador",
+        "imagenusuario": "1654097853506-imgUser2022-imagenusuario-worldMusic.jpeg"
+    },
+    {
+        "id": 16,
+        "nombres": "",
+        "apellidos": "",
+        "telefono": "",
+        "email": "",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador",
+        "imagenusuario": "1654097905708-imgUser2022-undefined-worldMusic.jpg"
+    },
+    {
+        "id": 17,
+        "nombres": "",
+        "apellidos": "",
+        "telefono": "",
+        "email": "",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador",
+        "imagenusuario": "1654097961272-imgUser2022-worldMusicundefined.jpg"
+    },
+    {
+        "id": 18,
+        "nombres": "",
+        "apellidos": "",
+        "telefono": "",
+        "email": "",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador",
+        "imagenusuario": "1654098051380-imgUser2022-worldMusicfoto.jpguser.jpg"
+    },
+    {
+        "id": 19,
+        "nombres": "",
+        "apellidos": "",
+        "telefono": "",
+        "email": "",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador",
+        "imagenusuario": "1654098148078-imgUser2022-worldMusicfoto.jpguser.jpg"
     }
 ]
