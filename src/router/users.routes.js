@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const { usersController } = require('../controllers/main.controller');
+//se llama al middleware de login
+const loginMiddleware = require('../middlewares/loginMiddleware');
 
 //se requiere multer
 const multer = require('multer');
@@ -29,7 +31,7 @@ router.post('/registro', uploadFile.single('imagenusuario'), usersController.aft
 
 router.get('/lista-usuarios', usersController.getUsers);
 
-router.post('/iniciar-sesion', usersController.afterLogin);
+router.post('/iniciar-sesion', loginMiddleware,usersController.afterLogin);
 
 router.get('/editar-usuario/:id_usuario', usersController.userToUpdate);
 

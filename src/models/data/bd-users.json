@@ -120,111 +120,34 @@
     },
     {
         "id": 10,
-        "nombres": "",
-        "apellidos": "",
-        "telefono": "",
-        "email": "",
-        "clave": "",
-        "confirmacionclave": "",
+        "nombres": "Cristian",
+        "apellidos": "Sanjuan",
+        "telefono": "304875",
+        "email": "cristian@ejemplo.com",
+        "clave": "clavecristian",
+        "confirmacionclave": "clavecristian",
         "rol": "administrador",
-        "imagenusuario": "foto-german.jpeg"
+        "interes": [
+            "pop-rock",
+            "rock"
+        ],
+        "imagenusuario": "1654117558901-imgUser2022-worldMusicfoto.jpguser.jpg"
     },
     {
         "id": 11,
-        "nombres": "",
-        "apellidos": "",
-        "telefono": "",
-        "email": "",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "administrador",
-        "imagenusuario": "foto-german.jpeg"
-    },
-    {
-        "id": 12,
-        "nombres": "",
-        "apellidos": "",
-        "telefono": "",
-        "email": "",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "administrador"
-    },
-    {
-        "id": 13,
-        "nombres": "",
-        "apellidos": "",
-        "telefono": "",
-        "email": "",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "administrador",
-        "imagenusuario": "1654097468327-imgUser2022-undefined-worldMusic.jpeg"
-    },
-    {
-        "id": 14,
-        "nombres": "",
-        "apellidos": "",
-        "telefono": "",
-        "email": "",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "administrador",
-        "imagenusuario": "1654097641698-imgUser2022-foto.jpg-worldMusic.jpg"
-    },
-    {
-        "id": 15,
-        "nombres": "",
-        "apellidos": "",
-        "telefono": "",
-        "email": "",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "administrador",
-        "imagenusuario": "1654097853506-imgUser2022-imagenusuario-worldMusic.jpeg"
-    },
-    {
-        "id": 16,
-        "nombres": "",
-        "apellidos": "",
-        "telefono": "",
-        "email": "",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "administrador",
-        "imagenusuario": "1654097905708-imgUser2022-undefined-worldMusic.jpg"
-    },
-    {
-        "id": 17,
-        "nombres": "",
-        "apellidos": "",
-        "telefono": "",
-        "email": "",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "administrador",
-        "imagenusuario": "1654097961272-imgUser2022-worldMusicundefined.jpg"
-    },
-    {
-        "id": 18,
-        "nombres": "",
-        "apellidos": "",
-        "telefono": "",
-        "email": "",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "administrador",
-        "imagenusuario": "1654098051380-imgUser2022-worldMusicfoto.jpguser.jpg"
-    },
-    {
-        "id": 19,
-        "nombres": "",
-        "apellidos": "",
-        "telefono": "",
-        "email": "",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "administrador",
-        "imagenusuario": "1654098148078-imgUser2022-worldMusicfoto.jpguser.jpg"
+        "nombres": "Andres German",
+        "apellidos": "Arciniegas Soracá",
+        "telefono": "300449585",
+        "email": "gerarck2022@ejemplo.com",
+        "clave": "clave123",
+        "confirmacionclave": "clave123",
+        "rol": "espectador",
+        "interes": [
+            "pop",
+            "pop-romantico",
+            "baladas",
+            "reggaeton"
+        ],
+        "imagenusuario": "1654118247697-imgUser2022-worldMusicfoto-german.jpeguser.jpeg"
     }
 ]

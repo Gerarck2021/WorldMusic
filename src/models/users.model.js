@@ -1,13 +1,10 @@
 const dataUsuarios = require('./data/bd-users.json');
 const fs = require('fs');
 const path = require('path');
+const { exit } = require('process');
 const usersModel = {
     getUsers: () => {
         return dataUsuarios;
-    },
-
-    getOneUser: (id) => {
-        dataUsuarios.filter(usuario => usuario.id == id);
     },
 
     isExist: (id) => {
@@ -63,6 +60,14 @@ const usersModel = {
       UserDelete: (id) => {
         let userDelete = usersModel.getUsers().filter(item => item.id != id);
         fs.writeFileSync(path.resolve(__dirname, './data/bd-users.json'), JSON.stringify(userDelete, null, 4), {encoding: 'utf8'});
+      },
+
+      getOneUser: (email, clave) => {
+        dataUsuarios.forEach(usuario => {
+            if(usuario.email == email && usuario.clave == clave) {
+                console.log("Ingreso exitoso");
+            } 
+        });
       }
 }
 
