@@ -117,5 +117,37 @@
             "romantico",
             "rock"
         ]
+    },
+    {
+        "id": 10,
+        "nombres": "",
+        "apellidos": "",
+        "telefono": "",
+        "email": "",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador",
+        "imagenusuario": "foto-german.jpeg"
+    },
+    {
+        "id": 11,
+        "nombres": "",
+        "apellidos": "",
+        "telefono": "",
+        "email": "",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador",
+        "imagenusuario": "foto-german.jpeg"
+    },
+    {
+        "id": 12,
+        "nombres": "",
+        "apellidos": "",
+        "telefono": "",
+        "email": "",
+        "clave": "",
+        "confirmacionclave": "",
+        "rol": "administrador"
     }
 ]

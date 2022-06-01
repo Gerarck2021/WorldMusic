@@ -1,5 +1,6 @@
 const path = require('path');
 const userModel = require('../models/users.model');
+const multer = require('multer');
 
 const newId = () => {
 	let ultimo = 0;
@@ -20,7 +21,15 @@ const usersController = {
         return res.render(path.resolve(__dirname, '../views/users/registro.ejs'));
     },
 
-    afterRegister: (req, res) => {
+    afterRegister: (req, res, next) => {
+
+        const file = req.file.name;
+        console.log(req.file.filename);
+        if(!file) {
+            const error = new Error('Tienes que insertar una imagen');
+            error.httpStatusCode = 400;
+            return next(error);
+        }
 
         const newUser = {
             id: newId(),
@@ -31,10 +40,13 @@ const usersController = {
             clave: req.body.clave,
             confirmacionclave: req.body.confirmacionclave,
             rol: req.body.roles,
-            interes: req.body.interes
+            interes: req.body.interes,
+            imagenusuario: req.file.filename
         }
+
         userModel.createUser(newUser);
         console.log(newUser);
+        console.log("Proceso Exitoso");
         res.redirect('/users/iniciar-sesion');
     },
 
