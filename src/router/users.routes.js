@@ -4,10 +4,75 @@ const path = require('path');
 const { usersController } = require('../controllers/main.controller');
 //se llama al middleware de login
 const loginMiddleware = require('../middlewares/loginMiddleware');
+//se llama body de express-validator
+const { body } = require('express-validator');
+
+//se crea array de validaciones al registrar usuarios
+const validacionesRegistroUsuarios = [
+    body('nombres')
+    .notEmpty()
+    .withMessage('Debes ingresar al menos un nombre'),
+    body('apellidos')
+    .notEmpty()
+    .withMessage('Debes ingresar al menos un apellido'),
+    body('telefono')
+    .isNumeric()
+    .withMessage('Debes ingresar un telefono valido'),
+    body('email')
+    .isEmail()
+    .withMessage('Debes ingresar un correo valido'),
+    body('clave')
+    .notEmpty()
+    .withMessage('Debes ingresar una clave valida'),
+    body('confirmacionclave')
+    .notEmpty()
+    .withMessage('Debes ingresar una clave valida'),
+    body('interes')
+    .custom((value, {req}) => {
+        let intereses = req.body.interes;
+        if(intereses.length == 0) {
+            return "Debes ingresar al menos una preferencia";
+        } else {
+            return intereses;
+        }
+    })
+];
+
+//se crea array de validaciones al modificar usuarios
+const validacionesModificacionUsuarios = [
+    body('nombres')
+    .notEmpty()
+    .withMessage('Debes ingresar al menos un nombre'),
+    body('apellidos')
+    .notEmpty()
+    .withMessage('Debes ingresar al menos un apellido'),
+    body('telefono')
+    .isNumeric()
+    .withMessage('Debes ingresar un telefono valido'),
+    body('email')
+    .isEmail()
+    .withMessage('Debes ingresar un correo valido'),
+    body('clave')
+    .notEmpty()
+    .withMessage('Debes ingresar una clave valida'),
+    body('confirmacionclave')
+    .notEmpty()
+    .withMessage('Debes ingresar una clave valida'),
+    body('interes')
+    .custom((value, {req}) => {
+        let intereses = req.body.interes;
+        if(intereses.length == 0) {
+            return "Debes ingresar al menos una preferencia";
+        } else {
+            return intereses;
+        }
+    })
+];
+
+
 
 //se requiere multer
 const multer = require('multer');
-const res = require('express/lib/response');
 
 //se realiza la configuracion donde se guarda la imagen y su nombre
 const storage = multer.diskStorage({
@@ -27,7 +92,7 @@ router.get('/iniciar-sesion', usersController.getLogin);
 router.get('/registro', usersController.getRegister);
 
 //se pone como middleware el uploadFile para indicar que se necesita subir una imagen
-router.post('/registro', uploadFile.single('imagenusuario'), usersController.afterRegister);
+router.post('/registro', validacionesRegistroUsuarios, uploadFile.single('imagenusuario'), usersController.afterRegister);
 
 router.get('/lista-usuarios', usersController.getUsers);
 
@@ -35,7 +100,7 @@ router.post('/iniciar-sesion', loginMiddleware,usersController.afterLogin);
 
 router.get('/editar-usuario/:id_usuario', usersController.userToUpdate);
 
-router.put('/editar-usuario/:id_usuario', usersController.userUpdated);
+router.put('/editar-usuario/:id_usuario', validacionesModificacionUsuarios, usersController.userUpdated);
 
 router.get('/eliminar-usuario/:id_usuario', usersController.UserToDelete);
 

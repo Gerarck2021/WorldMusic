@@ -30,19 +30,33 @@
 
         <label for="rol">Rol</label>
         <select name="roles" id="roles" class="options-roles">
-            <option value="administrador">Administrador</option>
-            <option value="espectador">Espectador</option>
+            <option value="administrador" <%= usuario.rol == 'administrador' ? 'selected' : null %>>Administrador</option>
+            <option value="espectador" <%= usuario.rol == 'espectador' ? 'selected' : null %>>Espectador</option>
         </select>
 
         <label for="correo">Intereses</label>
-        Pop<input type="checkbox" name="interes" id="interes" class="input-data" value="pop">
-        Pop-Rock<input type="checkbox" name="interes" id="interes" class="input-data" value="pop-rock">
-        Pop-Romantico<input type="checkbox" name="interes" id="interes" class="input-data" value="pop-romantico">
-        Romantico<input type="checkbox" name="interes" id="interes" class="input-data" value="romantico">
-        Rock<input type="checkbox" name="interes" id="interes" class="input-data" value="rock">
-        Baladas<input type="checkbox" name="interes" id="interes" class="input-data" value="baladas">
-        Salsa<input type="checkbox" name="interes" id="interes" class="input-data" value="salsa">
-        Reggaeton<input type="checkbox" name="interes" id="interes" class="input-data" value="reggaeton">
+        <div class="cajitas-check">
+            <ul class="part-one">
+                <label for="">Pop</label>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop" <%= usuario.interes.includes('pop') ? 'checked' : null %>></li>
+                <label for="">Pop Rock</label>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-rock" <%= usuario.interes.includes('pop-rock') ? 'checked' : null %>></li>
+                <label for="">Pop Romantico</label>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-romantico" <%= usuario.interes.includes('pop-romantico') ? 'checked' : null %>></li>
+                <label for="">Romantico</label>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="romantico" <%= usuario.interes.includes('romantico') ? 'checked' : null %>></li>
+            </ul>
+            <ul class="part-two">
+                <label for="">Rock</label>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="rock" <%= usuario.interes.includes('rock') ? 'checked' : null %>></li>
+                <label for="">Baladas</label>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="baladas" <%= usuario.interes.includes('baladas') ? 'checked' : null %>></li>
+                <label for="">Salsa</label>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="salsa" <%= usuario.interes.includes('salsa') ? 'checked' : null %>></li>
+                <label for="">Reggaeton</label>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="reggaeton" <%= usuario.interes.includes('reggaeton') ? 'checked' : null %>></li>
+            </ul>
+        </div>
 
         <div class="buttons">
             <input type="submit" value="Enviar" class="button">
