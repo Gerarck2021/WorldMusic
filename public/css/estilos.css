@@ -82,7 +82,7 @@ nav ul li a, div a, section a, .volver-inicio {
     color: black;
 }
 
-.contenido-elemento, section a, .acerca-cancion {
+.contenido-elemento, section a, .acerca-cancion{
     padding: 0.8vw;
     background-color: white;
     border: 1px solid black;
@@ -151,7 +151,7 @@ nav ul li a, div a, section a, .volver-inicio {
     border-radius: 30% 0% 30% 0%;
 } */
 
-article div p, .title, h2, footer, .descripcion-cancion, .downloads{
+article div p, .title, h2, footer, .descripcion-cancion, .downloads, .errors{
     background: white;
 }
 

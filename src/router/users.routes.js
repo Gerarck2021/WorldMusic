@@ -16,7 +16,7 @@ const validacionesRegistroUsuarios = [
     .notEmpty()
     .withMessage('Debes ingresar al menos un apellido'),
     body('telefono')
-    .isNumeric()
+    .notEmpty()
     .withMessage('Debes ingresar un telefono valido'),
     body('email')
     .isEmail()
@@ -27,14 +27,36 @@ const validacionesRegistroUsuarios = [
     body('confirmacionclave')
     .notEmpty()
     .withMessage('Debes ingresar una clave valida'),
-    body('interes')
-    .custom((value, {req}) => {
-        let intereses = req.body.interes;
-        if(intereses.length == 0) {
-            return "Debes ingresar al menos una preferencia";
-        } else {
-            return intereses;
+    body('roles')
+    .custom((value, { req }) => {
+        let valueRol = req.body.roles;
+
+        if(valueRol == 0) {
+            throw new Error('Debes seleccionar un rol');
         }
+
+        return true;
+    }),
+    body('interes')
+    .notEmpty()
+    .withMessage('Debes ingresar al menos un interes'),
+    body('imagenusuario')
+    .custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
+
+        if(!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if(!acceptedExtensions.includes(fileExtension)) {
+                throw new Error('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
+            }
+        }
+
+        
+
+        return true;
     })
 ];
 
@@ -47,7 +69,7 @@ const validacionesModificacionUsuarios = [
     .notEmpty()
     .withMessage('Debes ingresar al menos un apellido'),
     body('telefono')
-    .isNumeric()
+    .notEmpty()
     .withMessage('Debes ingresar un telefono valido'),
     body('email')
     .isEmail()
@@ -58,14 +80,34 @@ const validacionesModificacionUsuarios = [
     body('confirmacionclave')
     .notEmpty()
     .withMessage('Debes ingresar una clave valida'),
-    body('interes')
-    .custom((value, {req}) => {
-        let intereses = req.body.interes;
-        if(intereses.length == 0) {
-            return "Debes ingresar al menos una preferencia";
-        } else {
-            return intereses;
+    body('roles')
+    .custom((value, { req }) => {
+        let valueRol = req.body.roles;
+
+        if(valueRol == 0) {
+            throw new Error('Debes seleccionar un rol');
         }
+
+        return true;
+    }),
+    body('interes')
+    .notEmpty()
+    .withMessage('Debes ingresar al menos un interes'),
+    body('imagenusuario')
+    .custom((value, { req }) => {
+        let file = req.file;
+        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
+
+        if(!file) {
+            throw new Error('Tienes que subir una imagen');
+        } else {
+            let fileExtension = path.extname(file.originalname);
+            if(!acceptedExtensions.includes(fileExtension)) {
+                throw new Error('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
+            }
+        }
+
+        return true;
     })
 ];
 
@@ -92,7 +134,7 @@ router.get('/iniciar-sesion', usersController.getLogin);
 router.get('/registro', usersController.getRegister);
 
 //se pone como middleware el uploadFile para indicar que se necesita subir una imagen
-router.post('/registro', validacionesRegistroUsuarios, uploadFile.single('imagenusuario'), usersController.afterRegister);
+router.post('/registro', uploadFile.single('imagenusuario'), validacionesRegistroUsuarios, usersController.afterRegister);
 
 router.get('/lista-usuarios', usersController.getUsers);
 
@@ -100,7 +142,7 @@ router.post('/iniciar-sesion', loginMiddleware,usersController.afterLogin);
 
 router.get('/editar-usuario/:id_usuario', usersController.userToUpdate);
 
-router.put('/editar-usuario/:id_usuario', validacionesModificacionUsuarios, usersController.userUpdated);
+router.put('/editar-usuario/:id_usuario', uploadFile.single('imagenusuario'), validacionesModificacionUsuarios, usersController.userUpdated);
 
 router.get('/eliminar-usuario/:id_usuario', usersController.UserToDelete);
 

@@ -6,8 +6,8 @@ const artistaModelo = {
         return data;
     },
 
-    getArtista: (id, apodo) => {
-        return data.map(artista => artista.artista);
+    getArtista: (apodo) => {
+        return data.filter(artista => artista.apodo == apodo);
     },
 
     getCanciones: () => {

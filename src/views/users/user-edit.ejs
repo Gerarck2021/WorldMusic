@@ -8,19 +8,27 @@
 
     <%-include('../partials/header'); %>
 
-    <h1 class="title text-center">Modificacion de Usuarios - Usuario: <%= usuario.nombres %></h1>
-    <form action="/users/editar-usuario/<%=usuario.id %>?_method=PUT" method="post" class="form-register">
+    <% if(locals && locals.errores) { %>
+        <div class="errors">
+            <% for(error in errores) {%>
+                    <p class="error"><%= errores[error].msg %></p>
+            <% } %>
+        </div>
+    <% } %>
+
+    <h1 class="title text-center">Modificacion de Usuarios - Usuario: <%= locals && locals.usuario ? usuario.nombres : ''%></h1>
+    <form action="/users/editar-usuario/<%= locals && locals.usuario ? usuario.id : usuario.id%>?_method=PUT" method="post" class="form-register">
         <label for="correo">Nombres</label>
-        <input type="text" name="nombres" id="nombres" class="input-data" placeholder="Nombres Completos" value="<%=usuario.nombres %>">
+        <input type="text" name="nombres" id="nombres" class="input-data" placeholder="Nombres Completos" value="<%= locals && locals.usuario ? usuario.nombres : '' %>">
 
         <label for="apellidos">Apellidos</label>
-        <input type="text" name="apellidos" id="apellidos" class="input-data" placeholder="Apellidos Completos" value="<%=usuario.apellidos %>">
+        <input type="text" name="apellidos" id="apellidos" class="input-data" placeholder="Apellidos Completos" value="<%= locals && locals.usuario ? usuario.apellidos : ''%>">
 
         <label for="correo">Telefono</label>
-        <input type="tel" name="telefono" id="telefono" class="input-data" placeholder="+573003000000" value="<%=usuario.telefono %>">
+        <input type="tel" name="telefono" id="telefono" class="input-data" placeholder="+573003000000" value="<%= locals && locals.usuario ? usuario.telefono : '' %>">
 
         <label for="correo">Correo</label>
-        <input type="email" name="email" id="email" class="input-data" placeholder="usuario@ejemplo.com" value="<%=usuario.email %>">
+        <input type="email" name="email" id="email" class="input-data" placeholder="usuario@ejemplo.com" value="<%= locals && locals.usuario ?usuario.email : ''%>">
 
         <label for="correo">Clave</label>
         <input type="password" name="clave" id="clave" class="input-data" placeholder="*****************">
@@ -30,33 +38,36 @@
 
         <label for="rol">Rol</label>
         <select name="roles" id="roles" class="options-roles">
-            <option value="administrador" <%= usuario.rol == 'administrador' ? 'selected' : null %>>Administrador</option>
-            <option value="espectador" <%= usuario.rol == 'espectador' ? 'selected' : null %>>Espectador</option>
+            <option value="administrador" <%= (locals && locals.usuario) && usuario.rol == 'administrador' ? 'selected' : null %>>Administrador</option>
+            <option value="espectador" <%= (locals && locals.usuario) && usuario.rol == 'espectador' ? 'selected' : null %>>Espectador</option>
         </select>
 
         <label for="correo">Intereses</label>
         <div class="cajitas-check">
             <ul class="part-one">
                 <label for="">Pop</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop" <%= usuario.interes.includes('pop') ? 'checked' : null %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop" <%= (locals && locals.usuario) && usuario.interes.includes('pop') ? 'checked' : null %>></li>
                 <label for="">Pop Rock</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-rock" <%= usuario.interes.includes('pop-rock') ? 'checked' : null %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-rock" <%= (locals && locals.usuario) && usuario.interes.includes('pop-rock') ? 'checked' : null %>></li>
                 <label for="">Pop Romantico</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-romantico" <%= usuario.interes.includes('pop-romantico') ? 'checked' : null %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-romantico" <%= (locals && locals.usuario) && usuario.interes.includes('pop-romantico') ? 'checked' : null %>></li>
                 <label for="">Romantico</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="romantico" <%= usuario.interes.includes('romantico') ? 'checked' : null %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="romantico" <%= (locals && locals.usuario) && usuario.interes.includes('romantico') ? 'checked' : null %>></li>
             </ul>
             <ul class="part-two">
                 <label for="">Rock</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="rock" <%= usuario.interes.includes('rock') ? 'checked' : null %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="rock" <%= (locals && locals.usuario) && usuario.interes.includes('rock') ? 'checked' : null %>></li>
                 <label for="">Baladas</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="baladas" <%= usuario.interes.includes('baladas') ? 'checked' : null %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="baladas" <%= (locals && locals.usuario) && usuario.interes.includes('baladas') ? 'checked' : null %>></li>
                 <label for="">Salsa</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="salsa" <%= usuario.interes.includes('salsa') ? 'checked' : null %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="salsa" <%= (locals && locals.usuario) && usuario.interes.includes('salsa') ? 'checked' : null %>></li>
                 <label for="">Reggaeton</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="reggaeton" <%= usuario.interes.includes('reggaeton') ? 'checked' : null %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="reggaeton" <%= (locals && locals.usuario) && usuario.interes.includes('reggaeton') ? 'checked' : null %>></li>
             </ul>
         </div>
+
+        <label for="">Imagen</label>
+        <input type="file" name="imagenusuario" class="imagenusuario" accept=".jpg, .png, .jpeg" value="<%= locals && locals.usuario ? usuario.imagenusuario : ''%>">
 
         <div class="buttons">
             <input type="submit" value="Enviar" class="button">

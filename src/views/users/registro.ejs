@@ -8,19 +8,27 @@
 
     <%-include('../partials/header'); %>
 
+    <% if(locals && locals.errores) { %>
+        <div class="errors">
+            <% for(error in errores) {%>
+                    <p class="error"><%= errores[error].msg %></p>
+            <% } %>
+        </div>
+    <% } %>
+
     <h1 class="title text-center">Registro de Usuarios</h1>
     <form action="/users/registro" method="post" class="form-register" enctype="multipart/form-data">
         <label for="correo">Nombres</label>
-        <input type="text" name="nombres" id="nombres" class="input-data" placeholder="Nombres Completos">
+        <input type="text" name="nombres" id="nombres" class="input-data" placeholder="Nombres Completos" value="<%=locals && locals.old ? old.nombres : '' %>">
 
         <label for="apellidos">Apellidos</label>
-        <input type="text" name="apellidos" id="apellidos" class="input-data" placeholder="Apellidos Completos">
+        <input type="text" name="apellidos" id="apellidos" class="input-data" placeholder="Apellidos Completos" value="<%= locals && locals.old ? old.apellidos : ''%>">
 
         <label for="correo">Telefono</label>
-        <input type="tel" name="telefono" id="telefono" class="input-data" placeholder="+573003000000">
+        <input type="tel" name="telefono" id="telefono" class="input-data" placeholder="+573003000000" value="<%=locals && locals.old ? old.telefono : ''%>">
 
         <label for="correo">Correo</label>
-        <input type="email" name="email" id="email" class="input-data" placeholder="usuario@ejemplo.com">
+        <input type="email" name="email" id="email" class="input-data" placeholder="usuario@ejemplo.com" value="<%=locals && locals.old ? old.email : ''%>">
 
         <label for="correo">Clave</label>
         <input type="password" name="clave" id="clave" class="input-data" placeholder="*****************">
@@ -30,6 +38,7 @@
 
         <label for="rol">Rol</label>
         <select name="roles" id="roles" class="options-roles">
+            <option value="0">--Seleccionar un Rol--</option>
             <option value="administrador">Administrador</option>
             <option value="espectador">Espectador</option>
         </select>
@@ -38,23 +47,23 @@
         <div class="cajitas-check">
             <ul class="part-one">
                 <label for="">Pop</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop"></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop" <%= locals && locals.old ? 'checked' : '' %>></li>
                 <label for="">Pop Rock</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-rock"></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-rock" <%= locals && locals.old ? 'checked' : '' %>></li>
                 <label for="">Pop Romantico</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-romantico"></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-romantico" <%= locals && locals.old ? 'checked' : '' %>></li>
                 <label for="">Romantico</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="romantico"></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="romantico" <%= locals && locals.old ? 'checked' : '' %>></li>
             </ul>
             <ul class="part-two">
                 <label for="">Rock</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="rock"></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="rock" <%= locals && locals.old ? 'checked' : '' %>></li>
                 <label for="">Baladas</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="baladas"></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="baladas" <%= locals && locals.old ? 'checked' : '' %>></li>
                 <label for="">Salsa</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="salsa"></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="salsa" <%= locals && locals.old ? 'checked' : '' %>></li>
                 <label for="">Reggaeton</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="reggaeton"></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="reggaeton" <%= locals && locals.old ? 'checked' : '' %>></li>
             </ul>
         </div>
 

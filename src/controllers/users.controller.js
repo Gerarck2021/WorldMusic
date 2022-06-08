@@ -1,6 +1,7 @@
 const path = require('path');
 const userModel = require('../models/users.model');
-const multer = require('multer');
+//se añade valudationResult
+const { validationResult } = require('express-validator');
 
 const newId = () => {
 	let ultimo = 0;
@@ -22,6 +23,13 @@ const usersController = {
     },
 
     afterRegister: (req, res, next) => {
+
+        let errores = validationResult(req);
+
+        if(!errores.isEmpty()) {
+            console.log(errores);
+            return res.render(path.resolve(__dirname, '../views/users/registro.ejs'), {errores: errores.mapped(), old: req.body})
+        }
 
         const file = req.file;
         console.log(file);
@@ -79,7 +87,24 @@ const usersController = {
         }
     },
 
-    userUpdated: (req, res) => {
+    userUpdated: (req, res, next) => {
+
+        let errores = validationResult(req);
+
+        if(!errores.isEmpty()) {
+            console.log(errores);
+            return res.render(path.resolve(__dirname, '../views/users/user-edit.ejs'), {errores: errores.mapped(), old: req.body})
+        }
+
+        const file = req.file;
+        console.log(file);
+        console.log(req.file.filename);
+        if(!file) {
+            const error = new Error('Tienes que insertar una imagen');
+            error.httpStatusCode = 400;
+            return next(error);
+        }
+
         let idUserUrl = parseInt(req.params.id_usuario);
         let datosUsuario = {
             id: idUserUrl,
@@ -90,7 +115,8 @@ const usersController = {
             clave: req.body.clave,
             confirmacionclave: req.body.confirmacionclave,
             rol: req.body.roles,
-            interes: req.body.interes == undefined ? null : req.body.interes
+            interes: req.body.interes == undefined ? null : req.body.interes,
+            imagenusuario: req.file.filename
         }
         userModel.UserUpdate(idUserUrl, datosUsuario);
         console.log(datosUsuario);

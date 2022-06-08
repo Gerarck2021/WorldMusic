@@ -1,146 +1,12 @@
 [
     {
         "id": 1,
-        "nombres": "Ana Maria Maria Fuentes",
-        "apellidos": "Nuñez",
-        "telefono": "3008",
-        "email": "ana23@misena.edu.co",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "administrador",
-        "interes": null
-    },
-    {
-        "id": 2,
-        "nombres": "Ana",
-        "apellidos": "Fuentes",
-        "telefono": 3008,
-        "email": "ana23@misena.edu.co",
-        "clave": "1234",
-        "confirmacionclave": "1234",
-        "rol": "Administrador",
-        "interes": null
-    },
-    {
-        "id": 3,
         "nombres": "German",
         "apellidos": "Arciniegas",
-        "telefono": "27839",
+        "telefono": "12345",
         "email": "gaarciniegas23@misena.edu.co",
-        "clave": "abcd",
-        "confirmacionclave": "abcd",
-        "rol": "administrador"
-    },
-    {
-        "id": 4,
-        "nombres": "German",
-        "apellidos": "Arciniegas",
-        "telefono": "27839",
-        "email": "gaarciniegas23@misena.edu.co",
-        "clave": "abcd",
-        "confirmacionclave": "abcd",
-        "rol": "administrador",
-        "interes": [
-            "pop",
-            "pop-rock",
-            "pop-romantico"
-        ]
-    },
-    {
-        "id": 5,
-        "nombres": "Andres German",
-        "apellidos": "Arciniegas",
-        "telefono": "3008",
-        "email": "andres23@misena.edu.co",
-        "clave": "contraseñacambiada",
-        "confirmacionclave": "contraseñacambiada",
-        "rol": "administrador",
-        "interes": "rock"
-    },
-    {
-        "id": 6,
-        "nombres": "Bernardo",
-        "apellidos": "Flores",
-        "telefono": "3008731817",
-        "email": "bernardo@ejemplo.com",
-        "clave": "claveprueba",
-        "confirmacionclave": "claveprueba",
-        "rol": "administrador",
-        "interes": [
-            "pop-rock",
-            "pop-romantico"
-        ]
-    },
-    {
-        "id": 7,
-        "nombres": "Natalia",
-        "apellidos": "Laferte",
-        "telefono": "2840939757",
-        "email": "gaarciniegas23@misena.edu.co",
-        "clave": "dias",
-        "confirmacionclave": "dias",
-        "rol": "espectador",
-        "interes": [
-            "pop",
-            "pop-rock",
-            "pop-romantico"
-        ]
-    },
-    {
-        "id": 8,
-        "nombres": "Natalia",
-        "apellidos": "Laferte",
-        "telefono": "2840939757",
-        "email": "gaarciniegas23@misena.edu.co",
-        "clave": "dias",
-        "confirmacionclave": "dias",
-        "rol": "espectador",
-        "interes": [
-            "pop",
-            "pop-rock",
-            "pop-romantico"
-        ]
-    },
-    {
-        "id": 9,
-        "nombres": "Andres German",
-        "apellidos": "Arciniegas Soracá",
-        "telefono": "3008731817",
-        "email": "andres23@misena.edu.co",
-        "clave": "",
-        "confirmacionclave": "",
-        "rol": "espectador",
-        "interes": [
-            "pop",
-            "pop-rock",
-            "pop-romantico",
-            "romantico",
-            "rock"
-        ]
-    },
-    {
-        "id": 10,
-        "nombres": "Cristian",
-        "apellidos": "Sanjuan",
-        "telefono": "304875",
-        "email": "cristian@ejemplo.com",
-        "clave": "clavecristian",
-        "confirmacionclave": "clavecristian",
-        "rol": "administrador",
-        "interes": [
-            "pop-rock",
-            "rock"
-        ],
-        "imagenusuario": "1654117558901-imgUser2022-worldMusicfoto.jpguser.jpg"
-    },
-    {
-        "id": 11,
-        "nombres": "Andres German",
-        "apellidos": "Arciniegas Soracá",
-        "telefono": "300449585",
-        "email": "gerarck2022@ejemplo.com",
-        "clave": "clave123",
-        "confirmacionclave": "clave123",
+        "clave": "clavegerman",
+        "confirmacionclave": "clavegerman",
         "rol": "espectador",
         "interes": [
             "pop",
@@ -148,6 +14,6 @@
             "baladas",
             "reggaeton"
         ],
-        "imagenusuario": "1654118247697-imgUser2022-worldMusicfoto-german.jpeguser.jpeg"
+        "imagenusuario": "1654274634394-imgUser2022-worldMusic2-22f498c1a7.jpguser.jpg"
     }
 ]

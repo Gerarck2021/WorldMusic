@@ -11,7 +11,8 @@ const artistsController = {
 
     getArtistaEspecifico: (req, res) => {
         let datos = dataModel.getData();
-        return res.render(path.resolve(__dirname, '../views/artistas/artista-especifico.ejs'), {datos});
+        let ArtistaEspecifico = dataModel.getArtista(req.params.apodo);
+        return res.render(path.resolve(__dirname, '../views/artistas/artista-especifico.ejs'), {datos, ArtistaEspecifico});
     },
 
     getDataMusica: (req, res) => {
