@@ -47,23 +47,23 @@
         <div class="cajitas-check">
             <ul class="part-one">
                 <label for="">Pop</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop" <%= locals && locals.old ? 'checked' : '' %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop" <%= (locals && locals.old) && old.interes.includes('pop') ? 'checked' : '' %> checked></li>
                 <label for="">Pop Rock</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-rock" <%= locals && locals.old ? 'checked' : '' %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-rock" <%= (locals && locals.old) && old.interes.includes('pop-rock') ? 'checked' : '' %>></li>
                 <label for="">Pop Romantico</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-romantico" <%= locals && locals.old ? 'checked' : '' %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="pop-romantico" <%= (locals && locals.old) && old.interes.includes('pop-romantico') ? 'checked' : '' %>></li>
                 <label for="">Romantico</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="romantico" <%= locals && locals.old ? 'checked' : '' %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="romantico" <%= (locals && locals.old) && old.interes.includes('romantico') ? 'checked' : '' %>></li>
             </ul>
             <ul class="part-two">
                 <label for="">Rock</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="rock" <%= locals && locals.old ? 'checked' : '' %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="rock" <%= (locals && locals.old) && old.interes.includes('rock') ? 'checked' : '' %>></li>
                 <label for="">Baladas</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="baladas" <%= locals && locals.old ? 'checked' : '' %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="baladas" <%= (locals && locals.old) && old.interes.includes('baladas') ? 'checked' : '' %>></li>
                 <label for="">Salsa</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="salsa" <%= locals && locals.old ? 'checked' : '' %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="salsa" <%= (locals && locals.old) && old.interes.includes('salsa') ? 'checked' : '' %>></li>
                 <label for="">Reggaeton</label>
-                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="reggaeton" <%= locals && locals.old ? 'checked' : '' %>></li>
+                <li><input type="checkbox" name="interes" id="interes" class="input-data" value="reggaeton" <%= (locals && locals.old) && old.interes.includes('reggaeton') ? 'checked' : '' %>></li>
             </ul>
         </div>
 

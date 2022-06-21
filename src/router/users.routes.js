@@ -43,6 +43,7 @@ const validacionesRegistroUsuarios = [
     body('imagenusuario')
     .custom((value, { req }) => {
         let file = req.file;
+        console.log(file);
         let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
 
         if(!file) {
@@ -91,24 +92,29 @@ const validacionesModificacionUsuarios = [
         return true;
     }),
     body('interes')
-    .notEmpty()
-    .withMessage('Debes ingresar al menos un interes'),
-    body('imagenusuario')
     .custom((value, { req }) => {
-        let file = req.file;
-        let acceptedExtensions = ['.jpg', '.png', '.jpeg', '.gif'];
+        let interes = req.body.interes;
 
-        if(!file) {
-            throw new Error('Tienes que subir una imagen');
-        } else {
-            let fileExtension = path.extname(file.originalname);
-            if(!acceptedExtensions.includes(fileExtension)) {
-                throw new Error('Las extensiones de archivo permitidas son ' + acceptedExtensions.join(', '));
-            }
+        if(interes.length == 0 || interes == undefined){
+            return "Debes ingresar al menos un interes";
         }
 
         return true;
-    })
+    }),
+    body('imagenusuariomodificado')
+    .custom((value,{req}) =>{
+            let file = req.file
+            if(!file){
+                throw new Error('Tienes que subir una imagen')
+            }else{
+                let fileExtension = path.extname(file.originalname)
+                let acceptedExtensions = ['.jpg', '.png', '.gif','.jpeg'];
+                if (!acceptedExtensions.includes(fileExtension)){
+                    throw new Error(`Las extenciones de archivo permitidas son ${acceptedExtensions.join(',')}`)
+                }
+            }
+            return true;
+        })
 ];
 
 
@@ -142,7 +148,7 @@ router.post('/iniciar-sesion', loginMiddleware,usersController.afterLogin);
 
 router.get('/editar-usuario/:id_usuario', usersController.userToUpdate);
 
-router.put('/editar-usuario/:id_usuario', uploadFile.single('imagenusuario'), validacionesModificacionUsuarios, usersController.userUpdated);
+router.put('/editar-usuario/:id_usuario', uploadFile.single('imagenusuariomodificado'), validacionesModificacionUsuarios, usersController.userUpdated);
 
 router.get('/eliminar-usuario/:id_usuario', usersController.UserToDelete);
 

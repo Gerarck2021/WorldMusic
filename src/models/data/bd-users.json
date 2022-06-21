@@ -15,5 +15,36 @@
             "reggaeton"
         ],
         "imagenusuario": "1654274634394-imgUser2022-worldMusic2-22f498c1a7.jpguser.jpg"
+    },
+    {
+        "id": 2,
+        "nombres": "Ana Maria",
+        "apellidos": "Perez",
+        "telefono": "3008731817",
+        "email": "ana23@misena.edu.co",
+        "clave": "claveana",
+        "confirmacionclave": "claveana",
+        "rol": "administrador",
+        "interes": [
+            "pop",
+            "pop-romantico",
+            "romantico",
+            "baladas",
+            "salsa",
+            "reggaeton"
+        ],
+        "imagenusuario": "1654709084315-imgUser2022-worldMusicfoto.jpguser.jpg"
+    },
+    {
+        "id": 3,
+        "nombres": "Ana",
+        "apellidos": "Andrade",
+        "telefono": "5054000",
+        "email": "ana@ejemplo.com",
+        "clave": "claveanaandrade",
+        "confirmacionclave": "claveanaandrade",
+        "rol": "administrador",
+        "interes": "pop",
+        "imagenusuario": "1654709791446-imgUser2022-worldMusicfoto.jpguser.jpg"
     }
 ]
