@@ -7,6 +7,10 @@ const { indexRoutes, artistsRoutes, usersRoutes} = require('./router/main.routes
 //se requiere el middleware a nivel aplicacion
 // const logMiddlewareApplication = require('./middlewares/logMiddlewareApplication');
 
+app.get('/vista', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../../index.html'));
+})
+
 //para metodos de modificar y eliminar datos
 app.use(methodOverride('_method'));
 
