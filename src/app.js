@@ -8,7 +8,7 @@ const { indexRoutes, artistsRoutes, usersRoutes} = require('./router/main.routes
 // const logMiddlewareApplication = require('./middlewares/logMiddlewareApplication');
 
 app.get('/vista', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../../index.html'));
+    res.send('Hola Mundo');
 })
 
 //para metodos de modificar y eliminar datos
